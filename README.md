@@ -1,0 +1,3 @@
+# JavaScript-Slider
+
+JavaScript Slider

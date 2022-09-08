@@ -1,4 +1,5 @@
 ![Project Title](./img/title.png)
+<br />
 ![GitHub last commit](https://img.shields.io/github/last-commit/sinansarikaya/JavaScript-Slider?style=flat-square)
 
 ### Responsive slider made using JavaScript

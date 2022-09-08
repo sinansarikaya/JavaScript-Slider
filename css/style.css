@@ -59,6 +59,7 @@
   height: 15px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 #container .slider-container .dots .dot.active {
   background-color: rgba(255, 255, 255, 1);

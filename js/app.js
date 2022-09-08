@@ -31,15 +31,11 @@ const dotControl = (index) => {
 };
 
 const changeImg = () => {
-  if (counter < slides.length - 1) {
-    arrows[1].style.visibility = "visible";
-  } else {
-    arrows[1].style.visibility = "hidden";
+  if (counter > slides.length - 1) {
+    counter = 0;
   }
-  if (counter > 0) {
-    arrows[0].style.visibility = "visible";
-  } else {
-    arrows[0].style.visibility = "hidden";
+  if (counter < 0) {
+    counter = slides.length - 1;
   }
   slides.forEach((slide) => {
     slide.style.transform = `translateX(-${counter * 100}%)`;
@@ -53,10 +49,15 @@ arrows[0].addEventListener("click", () => {
   changeImg();
   return counter;
 });
-arrows[0].style.visibility = "hidden";
+
 // Next Button
 arrows[1].addEventListener("click", () => {
   counter++;
   changeImg();
   return counter;
 });
+
+setInterval(() => {
+  counter++;
+  changeImg();
+}, 3000);

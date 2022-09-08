@@ -3,6 +3,7 @@ const dots = document.querySelector(".dots");
 const arrows = document.querySelectorAll(".arrows i");
 
 let counter = 0;
+let autoSlide = true;
 
 slides.forEach((slide, index) => {
   slide.style.left = `${index * 100}%`;
@@ -57,7 +58,9 @@ arrows[1].addEventListener("click", () => {
   return counter;
 });
 
-setInterval(() => {
-  counter++;
-  changeImg();
-}, 3000);
+if (autoSlide === true) {
+  setInterval(() => {
+    counter++;
+    changeImg();
+  }, 3000);
+}

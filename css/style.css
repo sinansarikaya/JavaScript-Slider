@@ -12,8 +12,8 @@
   background-color: #d9d9d9;
 }
 #container .slider-container {
-  width: 80vw;
-  height: 40vh;
+  width: 80%;
+  height: 40%;
   max-width: 80rem;
   position: relative;
   border-radius: 0.5rem;

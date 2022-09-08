@@ -2,7 +2,7 @@ const slides = document.querySelectorAll(".slider-container .slide");
 const dots = document.querySelector(".dots");
 const arrows = document.querySelectorAll(".arrows i");
 
-slides.forEach(function (slide, index) {
+slides.forEach((slide, index) => {
   slide.style.left = `${index * 100}%`;
 });
 
@@ -14,6 +14,12 @@ for (let i = 0; i < slides.length; i++) {
     dots.innerHTML += `<div class="dot" data-id="${i}"></div>`;
   }
 }
+
+dots.addEventListener("click", (e) => {
+  const id = e.target.dataset.id;
+  counter = id;
+  changeImg();
+});
 
 const dotControl = (index) => {
   document.querySelectorAll(".dot").forEach((i) => {
@@ -34,7 +40,7 @@ const changeImg = () => {
   } else {
     arrows[0].style.visibility = "hidden";
   }
-  slides.forEach(function (slide) {
+  slides.forEach((slide) => {
     slide.style.transform = `translateX(-${counter * 100}%)`;
   });
   dotControl(counter);

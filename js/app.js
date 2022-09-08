@@ -2,11 +2,12 @@ const slides = document.querySelectorAll(".slider-container .slide");
 const dots = document.querySelector(".dots");
 const arrows = document.querySelectorAll(".arrows i");
 
+let counter = 0;
+
 slides.forEach((slide, index) => {
   slide.style.left = `${index * 100}%`;
 });
 
-let counter = 0;
 for (let i = 0; i < slides.length; i++) {
   if (i === 0) {
     dots.innerHTML += `<div class="dot active" data-id="${i}"></div>`;
